@@ -30,7 +30,7 @@ Then use the classes: `.btn`, `.panel`, `.badge`, `.pill`, `.progress`, `.quest-
 
 ## Source of truth & syncing
 
-The **live portfolio** (`ammarhakimi/portfolio`) is canonical — its `src/styles/tokens.css` and `src/styles/components/*` are where the design actually ships and evolves. This repo is a **documented, portable package** of that system for use with Claude Design and as a reference.
+The **live portfolio** (`scds7xdxnd-bit/portfolio`) is canonical — its `src/styles/tokens.css` and `src/styles/components/*` are where the design actually ships and evolves. This repo is a **documented, portable package** of that system for use with Claude Design and as a reference.
 
 When the portfolio's tokens or components change, re-sync here:
 

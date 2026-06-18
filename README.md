@@ -9,7 +9,7 @@
 
 ---
 
-This is the documented, portable source of truth for the **Taeyang Han** visual identity — packaged so it can be reused with [Claude / Claude Design](docs/BRIEF.md), referenced in code, or handed to any design tool. The live implementation ships in the [portfolio](https://github.com/ammarhakimi) (see [Source of truth](#source-of-truth)).
+This is the documented, portable source of truth for the **Taeyang Han** visual identity — packaged so it can be reused with [Claude / Claude Design](docs/BRIEF.md), referenced in code, or handed to any design tool. The live implementation ships in the [portfolio](https://github.com/scds7xdxnd-bit/portfolio) (see [Source of truth](#source-of-truth)).
 
 ## What's inside
 
