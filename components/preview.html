@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taeyang Han — Component preview</title>
+  <link rel="icon" href="../assets/logo/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700;800&family=Inter:wght@400;600&family=Press+Start+2P&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../tokens/tokens.css">
+  <link rel="stylesheet" href="components.css">
+  <style>
+    body { background: var(--bg-primary); color: var(--text-primary); font-family: var(--font-body); margin: 0; padding: 32px; line-height: 1.6; }
+    .wrap { max-width: 880px; margin: 0 auto; }
+    h1 { font-family: var(--font-game); font-weight: 800; letter-spacing: -0.02em; }
+    h2 { font-family: var(--font-game); font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--grey-dark); margin: 36px 0 14px; border-bottom: var(--border-subtle); padding-bottom: 6px; }
+    .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; }
+    .sw { border: 2px solid var(--ink); border-radius: var(--radius-md); overflow: hidden; }
+    .sw__chip { height: 52px; }
+    .sw__meta { padding: 6px 8px; background: var(--bg-panel); font-size: 11px; }
+    .sw__name { font-family: var(--font-pixel); font-size: 8px; letter-spacing: 0.04em; display: block; margin-bottom: 3px; }
+    .sw__hex  { color: var(--grey-dark); }
+    .toggle { position: fixed; top: 16px; right: 16px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <button class="btn btn--secondary btn--small toggle" onclick="document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'">Toggle theme</button>
+
+    <h1>Taeyang Han — Components</h1>
+    <p style="font-family: var(--font-hand); font-size: 22px; color: var(--grey-dark); margin-top: -8px;">Build systems. Level up life.</p>
+
+    <h2>Color</h2>
+    <div class="grid">
+      <div class="sw"><div class="sw__chip" style="background:var(--sunshine)"></div><div class="sw__meta"><span class="sw__name">SUNSHINE</span><span class="sw__hex">#FFD859</span></div></div>
+      <div class="sw"><div class="sw__chip" style="background:var(--coral)"></div><div class="sw__meta"><span class="sw__name">CORAL</span><span class="sw__hex">#FF6B6B</span></div></div>
+      <div class="sw"><div class="sw__chip" style="background:var(--sky)"></div><div class="sw__meta"><span class="sw__name">SKY</span><span class="sw__hex">#6EC6FF</span></div></div>
+      <div class="sw"><div class="sw__chip" style="background:var(--mint)"></div><div class="sw__meta"><span class="sw__name">MINT</span><span class="sw__hex">#7EE6A7</span></div></div>
+      <div class="sw"><div class="sw__chip" style="background:var(--purple)"></div><div class="sw__meta"><span class="sw__name">PURPLE</span><span class="sw__hex">#B084F5</span></div></div>
+      <div class="sw"><div class="sw__chip" style="background:var(--ink)"></div><div class="sw__meta"><span class="sw__name">INK</span><span class="sw__hex">#1E1E1E</span></div></div>
+    </div>
+
+    <h2>Buttons</h2>
+    <div class="row">
+      <button class="btn btn--primary">Primary</button>
+      <button class="btn btn--secondary">Secondary</button>
+      <button class="btn btn--coral">Coral</button>
+      <button class="btn btn--ghost">Ghost</button>
+      <button class="btn btn--secondary btn--small">Small</button>
+    </div>
+
+    <h2>Badges</h2>
+    <div class="row">
+      <span class="badge badge--star">★ Star</span>
+      <span class="badge badge--sky">Sky</span>
+      <span class="badge badge--mint">Mint</span>
+      <span class="badge badge--coral">Coral</span>
+      <span class="badge badge--purple">Purple</span>
+    </div>
+
+    <h2>Pills</h2>
+    <div class="row">
+      <span class="pill pill--filter is-active">Filter · active</span>
+      <span class="pill">Python</span>
+      <span class="pill pill--status--active">Active</span>
+      <span class="pill pill--status--in-development">In development</span>
+      <span class="pill pill--status--completed">Completed</span>
+    </div>
+
+    <h2>Progress</h2>
+    <div style="display:flex; flex-direction:column; gap:10px; max-width:420px;">
+      <div class="progress"><div class="progress__fill progress__fill--mint" style="width:60%"></div></div>
+      <div class="progress"><div class="progress__fill progress__fill--sunshine" style="width:70%"></div></div>
+      <div class="progress"><div class="progress__fill progress__fill--sky" style="width:80%"></div></div>
+    </div>
+
+    <h2>Quest panel</h2>
+    <div class="panel panel--quests" style="max-width:420px;">
+      <div class="panel__header">★ Current Quests</div>
+      <div class="panel__body">
+        <a class="quest-row" href="#">
+          <span class="quest-row__icon">💚</span>
+          <span class="quest-row__info">
+            <span class="quest-row__title">LifeOS</span>
+            <span class="quest-row__desc">Build my personal operating system</span>
+            <span class="quest-row__progress-row"><span class="progress"><span class="progress__fill progress__fill--mint" style="width:60%"></span></span><span class="quest-row__pct">60%</span></span>
+          </span>
+        </a>
+        <a class="quest-row" href="#">
+          <span class="quest-row__icon">🪙</span>
+          <span class="quest-row__info">
+            <span class="quest-row__title">Finance App</span>
+            <span class="quest-row__desc">Learn finance. Track. Grow.</span>
+            <span class="quest-row__progress-row"><span class="progress"><span class="progress__fill progress__fill--sunshine" style="width:70%"></span></span><span class="quest-row__pct">70%</span></span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
