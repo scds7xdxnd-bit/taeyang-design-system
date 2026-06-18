@@ -1,0 +1,27 @@
+<!-- @dsCard group="Colors" viewport="700x210" name="Contrast & status" subtitle="Text-on-fill rules + status meanings" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; background:var(--bg-primary); font-family:var(--font-body); padding:22px; color:var(--ink); }
+  h4 { font-family:var(--font-pixel); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--grey-dark); margin:0 0 10px; }
+  .row { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:18px; }
+  .fill { display:flex; align-items:center; justify-content:center; height:46px; padding:0 16px; border:var(--border-thin); border-radius:var(--radius-md); font-family:var(--font-game); font-weight:700; font-size:13px; }
+  .note { font-size:12px; color:var(--grey-dark); }
+</style></head>
+<body>
+  <h4>Text on fills — never grey on color</h4>
+  <div class="row">
+    <div class="fill" style="background:var(--sunshine);color:var(--ink)">Ink text</div>
+    <div class="fill" style="background:var(--sky);color:var(--ink)">Ink text</div>
+    <div class="fill" style="background:var(--mint);color:var(--ink)">Ink text</div>
+    <div class="fill" style="background:var(--coral);color:#fff">White text</div>
+    <div class="fill" style="background:var(--purple);color:#fff">White text</div>
+  </div>
+  <h4>Status meanings</h4>
+  <div class="row">
+    <div class="fill" style="background:var(--mint);color:var(--ink)">Mint = success / completed</div>
+    <div class="fill" style="background:var(--sunshine);color:var(--ink)">Sunshine = active / in progress</div>
+    <div class="fill" style="background:var(--coral);color:#fff">Coral = alert / in development</div>
+  </div>
+</body></html>

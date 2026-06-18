@@ -1,0 +1,58 @@
+/* ═══════════════════════════════════════════════
+   COLORS — brand palette + semantic aliases
+   "A cream notebook page, inked in black, stickered in sunshine."
+   ═══════════════════════════════════════════════ */
+:root {
+  /* ── Brand palette ── */
+  --sunshine:   #FFD859; /* primary accent · badges · panel headers · highlights */
+  --coral:      #FF6B6B; /* alerts · focus rings · energetic CTAs · "in development" */
+  --sky:        #6EC6FF; /* info · cool accents */
+  --mint:       #7EE6A7; /* success · "active / completed" status */
+  --purple:     #B084F5; /* special / creative accents */
+  --ink:        #1E1E1E; /* text · borders · shadows · dark fills */
+  --grey-dark:  #555555; /* secondary text */
+  --grey-light: #DCDCDC; /* subtle borders · tracks · dividers */
+  --cream:      #FFF7E6; /* page background — the "notebook page" */
+
+  /* ── Semantic aliases ── */
+  --bg-primary:     var(--cream);
+  --bg-panel:       #FFFFFF;
+  --text-primary:   var(--ink);
+  --text-secondary: var(--grey-dark);
+  --text-muted:     #9CA3AF;
+  --text-on-dark:   #FFFFFF;
+  --border-main:    var(--ink);
+  --border-light:   var(--grey-light);
+  /* dark band (footer / manifesto) — stays dark in BOTH themes,
+     unlike --ink which flips to light text-ink in dark mode */
+  --surface-invert: var(--ink);
+}
+
+/* ── Dark / "Night World" theme ──
+   Ink inverts to a warm off-white; accents mute; shadows flip light. */
+[data-theme="dark"] {
+  --ink:            #E8E6E0;
+  --grey-dark:      #A8A29E;
+  --grey-light:     #3A3835;
+  --cream:          #1A1917;
+  --bg-primary:     #1A1917;
+  --bg-panel:       #242220;
+  --text-primary:   #E8E6E0;
+  --text-secondary: #A8A29E;
+  --text-muted:     #6B6760;
+  --text-on-dark:   #E8E6E0;
+  --border-main:    #E8E6E0;
+  --border-light:   #3A3835;
+  --surface-invert: #100F0E;
+
+  --sunshine: #D4A800;
+  --coral:    #E05555;
+  --sky:      #5AAEE0;
+  --mint:     #5DC985;
+  --purple:   #9B6FE0;
+
+  --shadow-offset:    4px 4px 0 #E8E6E0;
+  --shadow-offset-sm: 2px 2px 0 #E8E6E0;
+  --shadow-pressed:   1px 1px 0 #E8E6E0;
+}
+[data-theme="dark"] body { color-scheme: dark; }

@@ -1,0 +1,21 @@
+<!-- @dsCard group="Colors" viewport="700x190" name="Ink & neutrals" subtitle="Ink, greys, and the cream notebook page" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; background:var(--bg-primary); font-family:var(--font-body); padding:22px; }
+  .row { display:flex; gap:14px; flex-wrap:wrap; }
+  .sw { display:flex; flex-direction:column; gap:8px; }
+  .chip { width:118px; height:74px; border:var(--border-thin); border-radius:var(--radius-md); }
+  .name { font-family:var(--font-pixel); font-size:9px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink); }
+  .hex { font-family:var(--font-body); font-size:11px; color:var(--grey-dark); }
+</style></head>
+<body>
+  <div class="row">
+    <div class="sw"><div class="chip" style="background:var(--ink)"></div><span class="name">Ink</span><span class="hex">#1E1E1E</span></div>
+    <div class="sw"><div class="chip" style="background:var(--grey-dark)"></div><span class="name">Grey Dark</span><span class="hex">#555555</span></div>
+    <div class="sw"><div class="chip" style="background:var(--grey-light)"></div><span class="name">Grey Light</span><span class="hex">#DCDCDC</span></div>
+    <div class="sw"><div class="chip" style="background:var(--cream)"></div><span class="name">Cream</span><span class="hex">#FFF7E6</span></div>
+    <div class="sw"><div class="chip" style="background:#FFFFFF"></div><span class="name">Panel</span><span class="hex">#FFFFFF</span></div>
+  </div>
+</body></html>

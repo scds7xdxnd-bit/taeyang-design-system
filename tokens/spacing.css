@@ -1,0 +1,45 @@
+/* ═══════════════════════════════════════════════
+   SPACING · RADII · BORDERS · SHADOWS · MOTION
+   The signature: thick ink borders + hard offset shadows (NO blur).
+   ═══════════════════════════════════════════════ */
+:root {
+  /* ── Spacing (8pt-ish) ── */
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* ── Radii ── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-pill: 999px;
+
+  /* ── Borders — bold, solid, always ink ── */
+  --border-thick:  3px solid var(--ink);
+  --border-thin:   2px solid var(--ink);
+  --border-subtle: 2px solid var(--grey-light);
+
+  /* ── Shadows — hard offset, no blur (the signature look) ── */
+  --shadow-offset:    4px 4px 0 var(--ink);
+  --shadow-offset-sm: 2px 2px 0 var(--ink);
+  --shadow-pressed:   1px 1px 0 var(--ink);
+  --shadow-none:      0 0 0 transparent;
+
+  /* ── Interaction transforms ── */
+  --hover-lift:   translateY(-2px); /* @kind other */
+  --active-press: translateY(1px);  /* @kind other */
+
+  /* ── Motion ── */
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1); /* @kind other */
+  --ease-smooth: cubic-bezier(0.2, 0.8, 0.2, 1); /* @kind other */
+  --duration-fast:   150ms; /* @kind other */
+  --duration-medium: 250ms; /* @kind other */
+  --duration-slow:   400ms; /* @kind other */
+
+  /* ── Layout ── */
+  --container-max: 1040px; /* @kind spacing */
+}

@@ -1,0 +1,23 @@
+<!-- @dsCard group="Brand" viewport="700x240" name="Texture & motifs" subtitle="Paper grain, pixel world, sticky-note callouts" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; background:var(--bg-primary); padding:24px; color:var(--ink); font-family:var(--font-body); position:relative; }
+  body::before { content:""; position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.06;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:140px 140px; }
+  .wrap { position:relative; z-index:1; display:flex; gap:20px; align-items:center; flex-wrap:wrap; }
+  .world { width:240px; height:150px; border:var(--border-thick); border-radius:var(--radius-md); box-shadow:var(--shadow-offset); object-fit:cover; image-rendering:pixelated; }
+  .col { display:flex; flex-direction:column; gap:14px; }
+  .note { align-self:flex-start; background:var(--sunshine); border:2px solid var(--ink); border-radius:var(--radius-sm); box-shadow:var(--shadow-offset-sm); padding:8px 12px; font-family:var(--font-pixel); font-size:10px; letter-spacing:.08em; transform:rotate(-2deg); }
+  .meta { font-size:12px; color:var(--grey-dark); line-height:1.6; max-width:260px; }
+</style></head>
+<body>
+  <div class="wrap">
+    <img class="world" src="../assets/img/world-bg.webp" alt="Pixel-art world map">
+    <div class="col">
+      <span class="note">★ BUILD · TEST · IMPROVE</span>
+      <p class="meta">A faint fractal-noise grain (~6% opacity) makes the cream read like a notebook page. Pixel-art world + sticky-note callouts add the human, game-world layer.</p>
+    </div>
+  </div>
+</body></html>

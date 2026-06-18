@@ -1,0 +1,195 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "assets/icons/**",
+              "components/core/**",
+              "ui_kits/portfolio/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Caveat|DM Sans|Inter|Klee One|Nanum Pen Script|Noto Sans KR|Press Start 2P|ZCOOL KuaiLe))/i]",
+        "message": "Font not provided by the design system. Available: Caveat, DM Sans, Inter, Klee One, Nanum Pen Script, Noto Sans KR, Press Start 2P, ZCOOL KuaiLe."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--active-press",
+      "--bg-panel",
+      "--bg-primary",
+      "--border-light",
+      "--border-main",
+      "--border-subtle",
+      "--border-thick",
+      "--border-thin",
+      "--container-max",
+      "--coral",
+      "--cream",
+      "--duration-fast",
+      "--duration-medium",
+      "--duration-slow",
+      "--ease-bounce",
+      "--ease-smooth",
+      "--font-body",
+      "--font-game",
+      "--font-hand",
+      "--font-hand-ja",
+      "--font-hand-ko",
+      "--font-hand-zh",
+      "--font-pixel",
+      "--fs-body",
+      "--fs-headline",
+      "--fs-micro",
+      "--fs-panel-header",
+      "--fs-pixel-badge",
+      "--fs-section-title",
+      "--fs-small",
+      "--grey-dark",
+      "--grey-light",
+      "--hover-lift",
+      "--ink",
+      "--lh-body",
+      "--lh-tight",
+      "--mint",
+      "--purple",
+      "--radius-lg",
+      "--radius-md",
+      "--radius-pill",
+      "--radius-sm",
+      "--shadow-none",
+      "--shadow-offset",
+      "--shadow-offset-sm",
+      "--shadow-pressed",
+      "--sky",
+      "--space-2xl",
+      "--space-3xl",
+      "--space-lg",
+      "--space-md",
+      "--space-sm",
+      "--space-xl",
+      "--space-xs",
+      "--sunshine",
+      "--surface-invert",
+      "--text-muted",
+      "--text-on-dark",
+      "--text-primary",
+      "--text-secondary",
+      "--tracking-pixel",
+      "--tracking-tight"
+    ],
+    "tokenKinds": {
+      "--sunshine": "color",
+      "--coral": "color",
+      "--sky": "color",
+      "--mint": "color",
+      "--purple": "color",
+      "--ink": "color",
+      "--grey-dark": "color",
+      "--grey-light": "color",
+      "--cream": "color",
+      "--bg-primary": "color",
+      "--bg-panel": "color",
+      "--text-primary": "font",
+      "--text-secondary": "font",
+      "--text-muted": "font",
+      "--text-on-dark": "font",
+      "--border-main": "color",
+      "--border-light": "color",
+      "--surface-invert": "color",
+      "--shadow-offset": "shadow",
+      "--shadow-offset-sm": "shadow",
+      "--shadow-pressed": "shadow",
+      "--font-body": "font",
+      "--font-game": "font",
+      "--font-pixel": "font",
+      "--font-hand": "font",
+      "--font-hand-ko": "font",
+      "--font-hand-ja": "font",
+      "--font-hand-zh": "font",
+      "--fs-section-title": "font",
+      "--fs-headline": "font",
+      "--fs-panel-header": "font",
+      "--fs-body": "font",
+      "--fs-small": "font",
+      "--fs-micro": "font",
+      "--fs-pixel-badge": "font",
+      "--tracking-tight": "font",
+      "--tracking-pixel": "font",
+      "--lh-tight": "font",
+      "--lh-body": "font",
+      "--space-xs": "spacing",
+      "--space-sm": "spacing",
+      "--space-md": "spacing",
+      "--space-lg": "spacing",
+      "--space-xl": "spacing",
+      "--space-2xl": "spacing",
+      "--space-3xl": "spacing",
+      "--radius-sm": "radius",
+      "--radius-md": "radius",
+      "--radius-lg": "radius",
+      "--radius-pill": "radius",
+      "--border-thick": "color",
+      "--border-thin": "color",
+      "--border-subtle": "color",
+      "--shadow-none": "shadow",
+      "--hover-lift": "other",
+      "--active-press": "other",
+      "--ease-bounce": "other",
+      "--ease-smooth": "other",
+      "--duration-fast": "other",
+      "--duration-medium": "other",
+      "--duration-slow": "other",
+      "--container-max": "spacing"
+    },
+    "fontFamilies": [
+      "Caveat",
+      "DM Sans",
+      "Inter",
+      "Klee One",
+      "Nanum Pen Script",
+      "Noto Sans KR",
+      "Press Start 2P",
+      "ZCOOL KuaiLe"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+<!-- @dsCard group="Spacing" viewport="700x210" name="The signature shadow" subtitle="Hard offset, no blur — rest → hover → press" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; background:var(--bg-primary); padding:30px; color:var(--ink); font-family:var(--font-body); }
+  .row { display:flex; gap:34px; flex-wrap:wrap; align-items:center; }
+  .item { display:flex; flex-direction:column; align-items:center; gap:12px; }
+  .card { width:120px; height:64px; background:var(--bg-panel); border:var(--border-thick); border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center; font-family:var(--font-game); font-weight:700; font-size:12px; }
+  .rest { box-shadow:var(--shadow-offset-sm); }
+  .hover { box-shadow:var(--shadow-offset); transform:translateY(-2px); }
+  .press { box-shadow:var(--shadow-pressed); transform:translateY(1px); }
+  .lab { font-family:var(--font-pixel); font-size:8px; letter-spacing:.08em; text-transform:uppercase; color:var(--grey-dark); }
+</style></head>
+<body>
+  <div class="row">
+    <div class="item"><div class="card rest">Rest</div><span class="lab">2 2 0 ink</span></div>
+    <div class="item"><div class="card hover">Hover ↑</div><span class="lab">4 4 0 · lift -2</span></div>
+    <div class="item"><div class="card press">Press ↓</div><span class="lab">1 1 0 · sink +1</span></div>
+  </div>
+</body></html>

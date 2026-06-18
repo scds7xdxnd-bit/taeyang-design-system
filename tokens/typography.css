@@ -1,0 +1,35 @@
+/* ═══════════════════════════════════════════════
+   TYPOGRAPHY — font stacks + roles
+   DM Sans for display/"game", Inter for body,
+   Press Start 2P for tiny pixel labels ONLY, Caveat for handwriting.
+   ═══════════════════════════════════════════════ */
+:root {
+  --font-body:  'Inter', system-ui, -apple-system, 'Noto Sans KR', sans-serif;
+  --font-game:  'DM Sans', 'Noto Sans KR', system-ui, sans-serif;
+  --font-pixel: 'Press Start 2P', 'Courier New', Courier, monospace;
+  --font-hand:  'Caveat', 'Noto Sans KR', cursive;
+  /* Per-language handwriting faces — apply via [data-lang] (see below) or use directly */
+  --font-hand-ko: 'Nanum Pen Script', 'Noto Sans KR', cursive;
+  --font-hand-ja: 'Klee One', cursive;
+  --font-hand-zh: 'ZCOOL KuaiLe', cursive;
+
+  /* Type scale (as shipped) */
+  --fs-section-title: clamp(1.35rem, 3.5vw, 1.75rem); /* @kind font */
+  --fs-headline:      clamp(1.25rem, 3vw, 1.5rem); /* @kind font */
+  --fs-panel-header:  13px; /* @kind font */
+  --fs-body:          16px; /* @kind font */
+  --fs-small:         13px; /* @kind font */
+  --fs-micro:         11px; /* @kind font */
+  --fs-pixel-badge:   10px; /* @kind font */
+
+  --tracking-tight:  -0.02em; /* @kind font */
+  --tracking-pixel:   0.1em;  /* @kind font */
+  --lh-tight: 1.2; /* @kind font */
+  --lh-body:  1.6; /* @kind font */
+}
+
+/* Language-specific handwriting fonts — set data-lang on <html> (or any wrapper)
+   to swap the handwriting face. Registered as [data-*] theme scopes. */
+[data-lang="ko"] { --font-hand: var(--font-hand-ko); }
+[data-lang="ja"] { --font-hand: var(--font-hand-ja); }
+[data-lang="zh"] { --font-hand: var(--font-hand-zh); }

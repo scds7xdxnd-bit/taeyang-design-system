@@ -1,0 +1,6 @@
+/* ═══════════════════════════════════════════════
+   FONTS — Taeyang Han design system
+   All faces are Google Fonts; loaded here so the whole
+   token closure (and any consumer) gets the webfonts.
+   ═══════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Klee+One&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@400;500;700&family=Press+Start+2P&family=ZCOOL+KuaiLe&display=swap');
